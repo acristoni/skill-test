@@ -34,7 +34,7 @@ function AccountReg(props) {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-  const verifyEmail=()=>{
+  const verifyEmail= async()=>{
     return axios.post(serverUrl+"users/emailverify",{
       email: email,
       locale: (localStorage.getItem('locale') || "Mn")
